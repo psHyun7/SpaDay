@@ -47,6 +47,10 @@ namespace SpaDay.Controllers
                 "Microdermabrasion", "Hydrofacial", "Rejuvenating", "Enzyme Peel"
             };
 
+            ViewBag.name = name;
+            ViewBag.skintype = skintype;
+            ViewBag.manipedi = manipedi;
+
             List<string> appropriateFacials = new List<string>();
             for (int i = 0; i < facials.Count; i++)
             {
@@ -55,6 +59,9 @@ namespace SpaDay.Controllers
                     appropriateFacials.Add(facials[i]);
                 }
             }
+
+            ViewBag.facial = appropriateFacials;
+
             return View();
         }
 
