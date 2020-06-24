@@ -1,0 +1,13 @@
+﻿<h1>Users</h1>
+
+@if (ViewBag.user == null || ViewBag.user == "")
+{
+    <p>Sign Up Now!</p>
+    <p><a asp-controller="User" asp-action="Add">Sign Up</a></p>
+}
+else
+{
+    <p>@ViewBag.user.Name, Welcome!</p>
+    <p class="footer">user.Email</p>
+    <p class="footer">user.Date</p>
+}
