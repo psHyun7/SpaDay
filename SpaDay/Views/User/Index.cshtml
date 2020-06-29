@@ -1,7 +1,18 @@
-﻿@{
+﻿@using SpaDay.ViewModels
+
+@model AddUserViewModel
+
+@if (Model == null)
+{
+    <h1>Welcome to our spa, </h1>
+    <h4>please register to use the services</h4>
+    <a asp-controller="User" asp-action="Add">Register</a>
+}
+else
+{
+    <h1>Welcome to our spa, @Model.Username!</h1>
 }
 
-<h1>Welcome to our spa, @ViewBag.user.Username!</h1>
 
 <p>
     <a asp-controller="Spa" asp-action="Index">Select Spa Services</a>
